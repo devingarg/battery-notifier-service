@@ -1,0 +1,17 @@
+[Unit]
+Description=Battery Level Notifier 
+# After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=300
+User=devin
+WorkingDirectory=/home/devin/cleaner/battery-notifier 
+ExecStart=/home/devin/cleaner/battery-notifier/env/bin/python main.py
+
+[Install]
+WantedBy=multi-user.target
+
+# the WantedBy essentially tells the system to start this service whether the runlevel is 3/4/5 (i.e. it will start with/without a local GUI)
