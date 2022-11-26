@@ -6,10 +6,10 @@ StartLimitIntervalSec=0
 [Service]
 Type=simple
 Restart=always
-RestartSec=300
+RestartSec=10
 User=devin
-WorkingDirectory=/home/devin/cleaner/battery-notifier 
-ExecStart=/home/devin/cleaner/battery-notifier/env/bin/python main.py
+WorkingDirectory=/home/devin/cleaner/battery-notifier
+ExecStart=/bin/bash -c "/home/devin/cleaner/battery-notifier/env/bin/python3 main.py"
 
 [Install]
 WantedBy=multi-user.target
