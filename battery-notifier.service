@@ -8,6 +8,8 @@ Type=simple
 Restart=always
 RestartSec=300
 User=devin
+StandardOutput=null
+StandardError=null
 WorkingDirectory=/home/devin/cleaner/battery-notifier 
 ExecStart=/home/devin/cleaner/battery-notifier/env/bin/python main.py
 
