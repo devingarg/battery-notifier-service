@@ -10,5 +10,5 @@ percent = battery_obj.percent
 # retrieve plug status
 plugged_in= battery_obj.power_plugged
 
-if percent > 90 and plugged_in:
+if plugged_in and percent > 87:
     beep(sound = 'ready')
